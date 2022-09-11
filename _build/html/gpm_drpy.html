@@ -481,10 +481,10 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting git+https://github.com/dopplerchase/DRpy.git
-  Cloning https://github.com/dopplerchase/DRpy.git to /private/var/folders/vr/4xwzfzr92_v2npmgfxdnq9vh0000gn/T/pip-req-build-ioqyn80a
+  Cloning https://github.com/dopplerchase/DRpy.git to /private/var/folders/vr/4xwzfzr92_v2npmgfxdnq9vh0000gn/T/pip-req-build-12tweu8t
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Running command git clone --filter=blob:none --quiet https://github.com/dopplerchase/DRpy.git /private/var/folders/vr/4xwzfzr92_v2npmgfxdnq9vh0000gn/T/pip-req-build-ioqyn80a
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Running command git clone --filter=blob:none --quiet https://github.com/dopplerchase/DRpy.git /private/var/folders/vr/4xwzfzr92_v2npmgfxdnq9vh0000gn/T/pip-req-build-12tweu8t
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Resolved https://github.com/dopplerchase/DRpy.git to commit 7d4246d977e926d02b19059de0a0c3793711e2f1
@@ -547,6 +547,59 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading: https://arthurhouhttps.pps.eosdis.nasa.gov/text/gpmdata/2021/05/15/radar/2A.GPM.DPR.V9-20211125.20210515-S204332-E221604.040979.V07A.HDF5
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">Input In [7],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">io</span> <span class="o">=</span> <span class="n">drpy</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">netrunner</span><span class="p">(</span><span class="n">servername</span><span class="o">=</span><span class="s1">&#39;Research&#39;</span><span class="p">,</span><span class="n">username</span><span class="o">=</span><span class="s1">&#39;hamidsyed37@gmail.com&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>                        <span class="n">start_time</span><span class="o">=</span><span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2021</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">43</span><span class="p">),</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>                       <span class="n">end_time</span><span class="o">=</span><span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2021</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">17</span><span class="p">))</span>
+
+<span class="nn">File ~/miniconda3/envs/syed/lib/python3.10/site-packages/drpy/io/io.py:48,</span> in <span class="ni">netrunner.__init__</span><span class="nt">(self, servername, username, start_time, end_time, autorun, savedir)</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="bp">self</span><span class="o">.</span><span class="n">locate_file</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="c1">#this will download it locally</span>
+<span class="ne">---&gt; </span><span class="mi">48</span> <span class="bp">self</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">savedir</span><span class="o">=</span><span class="n">savedir</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/syed/lib/python3.10/site-packages/drpy/io/io.py:200,</span> in <span class="ni">netrunner.download</span><span class="nt">(self, savedir)</span>
+<span class="g g-Whitespace">    </span><span class="mi">196</span> <span class="n">args</span> <span class="o">=</span> <span class="n">cmd</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">197</span> <span class="n">process</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">args</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">198</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">199</span> <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">200</span> <span class="n">process</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">201</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Done&#39;</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/syed/lib/python3.10/subprocess.py:1207,</span> in <span class="ni">Popen.wait</span><span class="nt">(self, timeout)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1205</span>     <span class="n">endtime</span> <span class="o">=</span> <span class="n">_time</span><span class="p">()</span> <span class="o">+</span> <span class="n">timeout</span>
+<span class="g g-Whitespace">   </span><span class="mi">1206</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1207</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wait</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1208</span> <span class="k">except</span> <span class="ne">KeyboardInterrupt</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1209</span>     <span class="c1"># https://bugs.python.org/issue25942</span>
+<span class="g g-Whitespace">   </span><span class="mi">1210</span>     <span class="c1"># The first keyboard interrupt waits briefly for the child to</span>
+<span class="g g-Whitespace">   </span><span class="mi">1211</span>     <span class="c1"># exit under the common assumption that it also received the ^C</span>
+<span class="g g-Whitespace">   </span><span class="mi">1212</span>     <span class="c1"># generated SIGINT and will exit rapidly.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1213</span>     <span class="k">if</span> <span class="n">timeout</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File ~/miniconda3/envs/syed/lib/python3.10/subprocess.py:1941,</span> in <span class="ni">Popen._wait</span><span class="nt">(self, timeout)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1939</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">returncode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1940</span>     <span class="k">break</span>  <span class="c1"># Another thread waited.</span>
+<span class="ne">-&gt; </span><span class="mi">1941</span> <span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="n">sts</span><span class="p">)</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_try_wait</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1942</span> <span class="c1"># Check the pid and loop as waitpid has been known to</span>
+<span class="g g-Whitespace">   </span><span class="mi">1943</span> <span class="c1"># return 0 even without WNOHANG in odd situations.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1944</span> <span class="c1"># http://bugs.python.org/issue14396.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1945</span> <span class="k">if</span> <span class="n">pid</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">pid</span><span class="p">:</span>
+
+<span class="nn">File ~/miniconda3/envs/syed/lib/python3.10/subprocess.py:1899,</span> in <span class="ni">Popen._try_wait</span><span class="nt">(self, wait_flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1897</span> <span class="sd">&quot;&quot;&quot;All callers to this function MUST hold self._waitpid_lock.&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1898</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1899</span>     <span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="n">sts</span><span class="p">)</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">waitpid</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pid</span><span class="p">,</span> <span class="n">wait_flags</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1900</span> <span class="k">except</span> <span class="ne">ChildProcessError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1901</span>     <span class="c1"># This happens if SIGCLD is set to be ignored or waiting</span>
+<span class="g g-Whitespace">   </span><span class="mi">1902</span>     <span class="c1"># for child processes has otherwise been disabled for our</span>
+<span class="g g-Whitespace">   </span><span class="mi">1903</span>     <span class="c1"># process.  This child is dead, we can&#39;t get the status.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1904</span>     <span class="n">pid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pid</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
 </div>
